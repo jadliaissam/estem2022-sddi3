@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <h1>
+            Liste Utilisateurs
+        </h1>
+        <a href="/users-new">Nouveau Utilisateur</a>
+<div>
+        <table style="width: 60%;">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <% for(let i=0; i<users.length; i++) { %>
+                <tr>
+                    <td><%= users[i].id %></td>
+                    <td><%= users[i].nom %></td>
+                    <td><%= users[i].prenom %></td>
+                    <td><%= users[i].age %></td>
+                    <td>
+                        <a href="/users/<%= users[i].id%>">Afficher</a>
+                        <a href="/users/<%= users[i].id%>/delete">Supprimer</a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>
