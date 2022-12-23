@@ -45,5 +45,11 @@ app.get('/users/:userId/delete', (req, res) => {
     res.redirect('/users')
 })
 
+app.get('/users/:userId/edit', (req, res)=> {
+    const userId = req.params.userId
+    const user = users.find(u => u.id == userId)
+    res.render('edit', {user})
+})
+
 app.listen(9000)
 

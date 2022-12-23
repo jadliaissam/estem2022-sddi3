@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h1>Editer Utilisateur</h1>
+    <form action="/users/<%= user.id%>/edit" method="post">
+      <div>
+        <label> ID </label>
+        <input type="text" name="id" value="<%= user.id %>" />
+      </div>
+      <div>
+        <label> Nom </label>
+        <input type="text" name="nom" value="<%= user.nom %>" />
+      </div>
+      <div>
+        <label> Prenom </label>
+        <input type="text" name="prenom" value="<%= user.prenom %>" />
+      </div>
+      <div>
+        <label> Age </label>
+        <input type="text" name="age" value="<%= user.age %>" />
+      </div>
+      <input type="submit" value="Envoyer" />
+    </form>
+  </body>
+</html>
